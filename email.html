@@ -1,0 +1,32 @@
+<html>
+
+
+<form action="https://postmail.invotes.com/send" method="post" id="email_form">
+
+    <input type="hidden" name="access_token" value="1ckrry32k9rngigx2yolyw0j" /> 
+    <input type="hidden" name="success_url" value="https://tulsiweb.com/thankyou.html" />
+    <input type="hidden" name="error_url" value="https://tulsiweb.com/thankyou.html" />
+   
+   
+    <input type="text" name="subject" placeholder="Subject" />
+    <textarea name="text" placeholder="Message"></textarea>  
+    <input id="submit_form" type="submit" value="Send" />
+
+	<p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+
+</form>
+     
+<!-- email_sending_script -->
+<script>
+    var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+</script> 
+
+
+</html>
